@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+	function facebook(){
+		window.open("https://www.facebook.com/");
+	}
+	function instagram(){
+		window.open("https://www.instagram.com/");
+	}
+	function twitter(){
+		window.open("https://x.com/");
+	}
+	</script>
+			<script>
+		function titleswitcher(){
+		if(window.location.hash === "#home"){
+			document.getElementById("star").innerhtml = "Home";
+				console.log("The URL matches!");
+		}else if(window.location.hash === "#photos"){
+			document.getElementById("star").innerhtml = "Photos";
+				console.log("The URL matches2!");
+		}else if(window.location.hash === "#blog"){
+			document.getElementById("star").innerhtml = "Blog";
+				console.log("The URL matches3!");
+		}else if(window.location.hash === "#bio"){
+			document.getElementById("star").innerhtml = "Bio";
+				console.log("The URL matches4!");
+		}else if(window.location.hash === "#contact"){
+			document.getElementById("star").innerhtml = "Contact";
+			document.getElementsByClassName("star").innerhtml = "Contact";
+				console.log("The URL matches5!");
+		}else{
+			document.getElementsById("star").innerhtml = "Home";
+				console.log("The URL matches6!");
+		}
+		
+		}
+		</script>
+	<style>
+	body {
+		font-family: "Times New Roman", Times, serif;
+		background: black;
+	}
+	
+	.sidebar {
+		margin: 0;
+		width: 10%;
+		height: 100%;
+		background-color: none;
+		position: fixed;
+	}
+
+	.sidebar a {
+		display: block;
+		color: white;
+		padding: 8px;
+		text-decoration: none;
+		text-align: left;
+	}
+	.sidebar a.active {
+		color: yellow;
+	}
+
+	.sidbar a.hover:not(.active) {
+		background-color: green;
+		color: pink;
+	}
+	div.content {
+		margin-left:10%;
+		margin-right:0%;
+		padding: 1px; 8px;
+		height: 1800px;
+		color: white;
+	}
+	.sidebar button {
+		border: none;
+		background-color: black;
+		color:black;
+		width: 20%;
+	}
+	.icons {
+		max-width: 20px;
+		height: 20px;
+	}
+	.responsive-image {
+		height: 220px;
+		width: auto;
+
+	}
+	div.col {
+		text-align: center;
+		border: dotted;
+		height: 300px;
+		width: auto;
+	}
+	div.images {
+		text-align: right;
+		background-color: black;
+	}
+	.card {
+		padding: 0;
+		border: none;
+	}
+	.card-button-top {
+		padding: 0;
+		border: none;
+		text-align: right;
+		margin: 10px;
+
+	}
+	.sidebar h2 {
+		color: white;
+		margin-left: 30px;
+	}
+	</style>
+	<body>
+	<div class="sidebar" id="side">
+		<h2 class = "star" id = "star"> Shutter </h2>
+		<a class = "butn start" href="#home" onclick="titleswitcher();">Home</a>
+		<a class = "butn" href="#photos" onclick="titleswitcher();">Photos</a>
+		<a class = "butn" href="#bio" onclick="titleswitcher();">Bio</a>
+		<a class = "butn" href="#blog" onclick="titleswitcher();">Blog</a>
+		<a class = "butn" href="#contact" onclick="titleswitcher();">Contact</a>
+		<a class = "butn active" href="#home"></a>
+		<button type="button" onclick="facebook()"><img src="facebook.png" alt="Error" class = "icons"></button>
+		<button type="button" onclick="twitter()"><img src="twitter.png" alt="Error" class = "icons"></button>
+		<button type="button" onclick="instagram()"><img src="instagram.png" alt="Error" class = "icons"></button>
+	</div>
+	<script>
+	// Add active class to the current button (highlight it)
+		var header = document.getElementById("side");
+		var btns = header.getElementsByClassName("butn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName(" active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+			});
+
+		}
+
+</script>
+	<div id = home class = "content">
+			<div class = "images" >
+				<button type="button" class = "card-button-top" data-toggle="modal" data-target="#3">
+					<img src="3.jpg" alt="Error" class = "responsive-image">
+				</button>
+				<button type="button"  class = "card-button-top" data-toggle="modal" data-target="#4">
+					<img src="4.jpg" alt="Error" class = "responsive-image">
+				</button>
+			</div>
+			<div class = "images">
+				<button type="button" class="card-button-top" data-toggle="modal" data-target="#1">
+					<img src="1.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#2">
+					<img src="2.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#5">
+					<img src="5.jpg" alt="Error" class="responsive-image">
+				</button>
+			</div>
+			<div class = "images">
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#6">
+					<img src="6.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#7">
+					<img src="7.jpg" alt="Error" class="responsive-image">
+				</button>
+			</div>
+	<!-- Modal 1 -->
+	<div class="modal fade" id="1">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="1.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 2 -->
+	<div class="modal fade" id="2">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="2.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 3 -->
+	<div class="modal fade" id="3">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="3.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 4 -->	
+	<div class="modal fade" id="4">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="4.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 5 -->	
+	<div class="modal fade" id="5">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="5.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 6 -->	
+	<div class="modal fade" id="6">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="6.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Modal 7 -->	
+	<div class="modal fade" id="7">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="7.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id = photos class = "content">
+			<div class = "images" >
+				<button type="button" class = "card-button-top" data-toggle="modal" data-target="#8">
+					<img src="8.jpg" alt="Error" class = "responsive-image">
+				</button>
+				<button type="button"  class = "card-button-top" data-toggle="modal" data-target="#9">
+					<img src="9.jpg" alt="Error" class = "responsive-image">
+				</button>
+				<button type="button" class="card-button-top" data-toggle="modal" data-target="#10">
+					<img src="10.jpg" alt="Error" class="responsive-image">
+				</button>
+			</div>
+			<div class = "images">
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#11">
+					<img src="11.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#12">
+					<img src="12.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#13">
+					<img src="13.jpg" alt="Error" class="responsive-image">
+				</button>
+			</div>
+			<div class = "images">
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#14">
+					<img src="14.jpg" alt="Error" class="responsive-image">
+				</button>
+				<button type="button" class= "card-button-top" data-toggle="modal" data-target="#15">
+					<img src="15.jpg" alt="Error" class="responsive-image">
+				</button>
+			</div>
+	<!-- Modal 1 -->
+	<div class="modal fade" id="8">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="8.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 2 -->
+	<div class="modal fade" id="9">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="9.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 3 -->
+	<div class="modal fade" id="10">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="10.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 4 -->	
+	<div class="modal fade" id="11">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="11.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 5 -->	
+	<div class="modal fade" id="12">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="12.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<!-- Modal 6 -->	
+	<div class="modal fade" id="13">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="13.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Modal 7 -->	
+	<div class="modal fade" id="14">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="14.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="15">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<img src="15.jpg" alt="Error">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id = bio class = "content" style="margin-right: 10%;">
+	<h1> Bio </h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum, velit at sodales gravida, justo nulla dapibus metus, a tempus ligula ex nec elit. Sed euismod libero vitae varius consequat. Donec auctor nisi a sapien gravida, et luctus ex tristique. Integer sollicitudin gravida eros, vel dapibus felis facilisis ut. Vestibulum tempor nunc in magna auctor, id cursus arcu consequat. Aenean vel magna sapien. Ut a velit sit amet justo consequat lacinia. Duis ut magna ut sapien elementum tempus. Sed fringilla erat at dolor ultricies, vel ultricies justo bibendum. Praesent nec augue a sapien facilisis euismod ac eget nulla. Vivamus mollis ultricies felis, vel feugiat orci iaculis at. Curabitur vestibulum, urna id efficitur interdum, orci arcu ornare arcu, in eleifend purus ipsum at ligula. Fusce consequat libero sed risus ultrices gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ultricies magna sit amet tortor gravida, euismod sollicitudin nisl vehicula.
+		</p>
+		<p>
+			Duis tincidunt tincidunt odio, at condimentum purus tempus at. Nam eget velit neque. Aenean nec urna in libero laoreet tincidunt. Morbi auctor velit nec mi dictum, a facilisis ipsum tincidunt. Phasellus ut dui ac arcu ullamcorper pharetra. Proin ac mi ac libero varius scelerisque. Sed bibendum, felis nec egestas faucibus, ex magna posuere lacus, ac lacinia urna dolor id est. Fusce at eros id turpis efficitur euismod. Suspendisse potenti. Ut facilisis metus a lectus tempor, et tincidunt odio sollicitudin. Cras facilisis urna vel libero ultrices, eget auctor velit dapibus. Donec nec orci eu sapien scelerisque vehicula. Maecenas euismod odio at felis ornare, ut varius felis viverra. Nullam ac quam ac sem malesuada egestas. Integer condimentum metus non odio aliquam, a volutpat nunc consequat. Pellentesque at ante non orci pretium convallis.
+		</p>	
+		<p>
+			Vivamus scelerisque libero eget eros laoreet, sit amet vulputate odio volutpat. Cras lobortis consectetur tortor a interdum. Integer viverra, odio at fringilla gravida, turpis lorem lacinia justo, a consectetur tortor risus eu dolor. In hac habitasse platea dictumst. Aliquam erat volutpat. Sed in orci ut sapien dictum fermentum. Mauris gravida, eros sit amet ultrices faucibus, neque libero aliquet purus, sed faucibus arcu eros eget magna. Nunc ut felis nec turpis viverra eleifend. Duis consequat risus vel lorem dapibus, ac consectetur odio congue. Ut sollicitudin orci sed nisl fringilla, non egestas nisi ultrices. Proin suscipit magna sed lorem convallis, sed varius purus consectetur. Vivamus vehicula libero id sagittis vehicula. Integer suscipit erat vel nulla condimentum, ac rhoncus libero consectetur. Nam et ligula ac libero ultrices blandit. Cras eu nulla vehicula, tempor sapien id, facilisis elit.
+		</p>
+		<p>
+			Sed aliquam, felis et elementum viverra, mauris purus bibendum lacus, eget elementum eros libero id mauris. Aliquam erat volutpat. Phasellus convallis risus non ligula consectetur, a dictum risus eleifend. Proin et nunc ac turpis venenatis feugiat. Nam sed erat quis lacus dignissim condimentum. Integer sit amet odio ut nulla vehicula tristique. Cras sit amet libero vitae turpis lacinia volutpat. Vivamus et mi nec ex tincidunt congue id ut nisi. Pellentesque id ante at urna posuere ultricies. Fusce dapibus dolor nec ipsum venenatis, nec dapibus ipsum auctor. Quisque sagittis ex sed nisi pellentesque auctor. Nulla facilisi. Suspendisse potenti. Curabitur vulputate neque vel nisi lacinia, ac vestibulum sem pretium. Donec imperdiet arcu sit amet purus viverra, at varius odio sollicitudin. Cras tincidunt erat ac nisi varius, id malesuada odio venenatis.
+		</p>
+
+	</div>
+	<div id = blog class = "content" style="margin-right: 10%;">
+	<h1> Blog </h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ornare urna. Ut euismod turpis et elit consectetur, in vehicula mauris egestas. Aenean euismod sapien in dolor posuere, non convallis dui auctor. Nullam euismod risus eget neque fermentum, ut tincidunt turpis volutpat. Phasellus consectetur libero ac interdum fringilla. Integer sit amet orci vitae est pharetra eleifend. Mauris vel faucibus justo. Proin ut vestibulum nunc. Cras ac ligula sit amet elit pharetra gravida. Vivamus euismod urna id felis consequat, a tristique risus vulputate. Aliquam erat volutpat. Donec vulputate, justo ut tincidunt condimentum, velit arcu cursus tortor, in volutpat libero erat non erat. Integer dictum diam id quam sagittis, vel bibendum sapien fringilla. Fusce vitae nulla ornare, euismod odio sit amet, ultricies justo. Duis facilisis odio ac ligula lacinia, eget blandit libero rhoncus. Curabitur dignissim ultricies ligula, sit amet sollicitudin eros feugiat id. Pellentesque in dui sed erat euismod venenatis. Aenean eget fermentum nunc.
+		</p>
+		<p>
+			Sed vitae magna vel libero aliquet fermentum eget eget nisi. Morbi sagittis, lacus eget scelerisque vulputate, eros mi ullamcorper dui, sit amet feugiat urna risus ut erat. Donec gravida libero eu diam bibendum, in lacinia odio consequat. Vivamus accumsan nulla ut sem interdum, eget lacinia ante posuere. Nulla facilisi. Ut dapibus ex sed magna fermentum, id ornare augue condimentum. Aenean vitae quam vel lectus aliquam tempus. Fusce convallis purus id dolor venenatis, in volutpat nisi pharetra. Proin sollicitudin lectus ac orci dictum, sed gravida mi cursus. Suspendisse potenti. Praesent dictum lacus ac nisi gravida, sit amet convallis elit faucibus. Integer ut neque nec risus cursus vulputate. Vestibulum luctus nisl nec turpis tincidunt, id auctor lacus posuere. Quisque ac dolor vitae ipsum tristique tincidunt. Nulla eget ultricies sapien. Morbi aliquam nisi non est placerat suscipit.
+		</p>
+		<p>
+			Cras tincidunt odio sed felis malesuada, in posuere nisi interdum. Sed quis dictum ipsum. Integer varius purus et purus tincidunt, et fringilla mauris feugiat. Vivamus vitae risus ut tortor facilisis auctor. Nam id velit vitae elit auctor bibendum. Aliquam erat volutpat. Donec dapibus orci sed est posuere, eget euismod urna faucibus. Praesent id nunc sed mauris dictum tincidunt. Curabitur in mi sit amet metus ultricies varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce in purus vel lectus scelerisque volutpat. Ut facilisis risus non metus accumsan, eu elementum lorem vehicula. Nulla sed sem vulputate, scelerisque ligula nec, aliquam ex. Donec vestibulum eros at erat tincidunt vehicula. Phasellus in magna vitae nisl tristique iaculis. Morbi non urna eu tortor cursus maximus. Nunc a sapien auctor, ultricies sapien sed, fermentum eros.
+		</p>
+		<p>
+			Ut dictum nisl a lectus varius fringilla. Integer auctor metus ac neque suscipit, nec ultricies eros auctor. Donec vehicula ligula in odio varius, a interdum orci lacinia. Phasellus in eros ut elit posuere pellentesque. Proin eget ante sit amet nulla condimentum tincidunt. Vivamus et turpis et lectus dignissim tincidunt. Cras scelerisque lorem in magna laoreet, sed scelerisque odio cursus. Aliquam erat volutpat. Nam vitae ligula non turpis tempor pretium. Fusce cursus purus nec dictum fermentum. Nullam euismod risus ac libero vehicula, eget congue velit cursus. Suspendisse potenti. Integer quis sapien eget purus convallis vehicula. Duis sit amet ipsum nec lacus rhoncus egestas. Ut gravida mauris vel velit ornare, a scelerisque purus cursus. Pellentesque eu metus eu augue vulputate fringilla. Sed et magna lacinia, facilisis sapien ac, sodales elit.
+		</p>
+	
+	</div>
+	<div id = contact class = "content" style="margin-right: 10%;">
+	<h1> Contact </h1>
+	<form action="/action_page.php">
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="message">Short Message:</label>
+			<textarea type="message" class="form-control" id="message" placeholder="Enter a short message" name="message" style = "height: 100px"> </textarea>
+		</div>
+		<p> </p>
+		<div class="form-group">
+			<label for="phone">Phone Number:</label>
+			<input type="phone" class="form-control" id="phone" placeholder="***-***-****" name="phone">
+		</div>
+		<div class="checkbox">
+		<label><input type="checkbox" name="remember"> Remember me</label>
+		</div>
+		<button type="submit" class="btn btn-light">Submit</button>
+	</form>
+	</div>
+	</body>
+<html>
